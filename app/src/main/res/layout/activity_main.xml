@@ -8,18 +8,48 @@
     android:orientation="vertical"
     android:scrollbars="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cryptoRcView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="10"
-        tools:listitem="@layout/crypto_list_item"/>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        tools:text="hey"/>
+        android:background="@android:color/darker_gray"
+        app:tabMode="auto"
+        android:layout_weight="1">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="First"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Second"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:id="@+id/placeHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="100">
+
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/buttonv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:text="hey"/>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </LinearLayout>
